@@ -14,7 +14,7 @@ Char::Char(scene::ISceneManager* smgr, video::IVideoDriver* driver, core::vector
 	moving = core::vector3df(0,0,0);
 	Collision = 0;
 
-	Body = smgr->addMeshSceneNode(smgr->getMesh("D:/Travail/Programmation/media/Meshs/tank_body.3ds"));
+	Body = smgr->addMeshSceneNode(smgr->getMesh("./meshs/tank_body.3ds"));
 	if (Body)
 	{
 		Body->setPosition(posBody);
@@ -23,12 +23,12 @@ Char::Char(scene::ISceneManager* smgr, video::IVideoDriver* driver, core::vector
 		Body->setMaterialFlag(video::EMF_WIREFRAME, false);
 	}
 
-	Tour = smgr->addMeshSceneNode(smgr->getMesh("D:/Travail/Programmation/media/Meshs/tank_tour.3ds"));
+	Tour = smgr->addMeshSceneNode(smgr->getMesh("./meshs/tank_tour.3ds"));
 	if (Tour)
 	{
 		Tour->setPosition(Body->getPosition()+core::vector3df(0,3,0));
 		//Tour->setScale(core::vector3df(0.4f,0.2f,0.8f));
-		Tour->setMaterialTexture(0, driver->getTexture("D:/Travail/Programmation/media/Textures/char_tour.png"));
+		//Tour->setMaterialTexture(0, driver->getTexture("./media/Textures/char_tour.png"));
 		Tour->setMaterialFlag(video::EMF_WIREFRAME, false);
 	}
 }
